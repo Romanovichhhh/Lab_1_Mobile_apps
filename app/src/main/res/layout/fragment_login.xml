@@ -6,125 +6,102 @@
     tools:context=".LoginFragment">
 
 
-        <TableRow
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="75dp"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="35dp"
-            android:gravity="center">
+            android:text="Вход"
+            android:textSize="35dp"
+            android:paddingHorizontal="20dp"
+            android:gravity="center"
+            />
+    </TableRow>
 
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Регистрация"
-                android:textSize="35dp"
-                android:paddingHorizontal="20dp"
-                android:gravity="center_vertical"/>
-        </TableRow>
-
-        <TableRow
+        <EditText
+            android:id="@+id/enterEmail"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:ems="10"
+            android:hint="Введите email"
+
+            android:inputType="textEmailAddress" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/enterPassword"
+            android:layout_width="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp">
-
-            <EditText
-                android:id="@+id/addEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Введите email"
-                android:inputType="textEmailAddress" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp">
-
-            <EditText
-                android:id="@+id/addUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Введите имя пользователя"
-                android:inputType="textPassword" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp">
-
-            <EditText
-                android:id="@+id/addPassword"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Придумайте пароль"/>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp">
+            android:minHeight="30dp"
+            android:ems="10"
+            android:hint="Введите пароль"
+            android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/editTextTextPassword2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:hint="Повторите пароль"
-                />
-        </TableRow>
+    </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
 
 
-            android:layout_marginTop="80dp">
+        android:layout_marginTop="80dp">
 
-            <Button
-                android:id="@+id/regButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Зарегестироваться"
-                android:minHeight="65dp"/>
-        </TableRow>
-
-        <TableRow
+        <Button
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            >
-            <Button
-                android:id="@+id/GoToLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Уже есть аккаунт?"
-                android:textColor="#939292"
-                style="@style/Widget.AppCompat.Button.Borderless"
 
-                />
+            android:text="Войти"
+            android:minHeight="65dp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/goToReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ещё нет аккаунта?"
+            android:textColor="#939292"
+            style="@style/Widget.AppCompat.Button.Borderless"
+
+            />
 
 
-        </TableRow>
+    </TableRow>
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </TableLayout>
