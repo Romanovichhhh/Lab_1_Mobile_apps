@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Введите имя пользователя"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             tools:ignore="TouchTargetSizeCheck" />
     </TableRow>
 
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginTop="10dp">
 
         <EditText
@@ -71,9 +71,23 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Придумайте пароль"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             tools:ignore="TouchTargetSizeCheck" />
 
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Пароль должен быть от 6 до 20 символов"
+            android:textSize="12sp" />
     </TableRow>
 
     <TableRow
@@ -99,7 +113,7 @@
         android:gravity="center"
 
 
-        android:layout_marginTop="80dp">
+        android:layout_marginTop="65dp">
 
         <Button
             android:id="@+id/registrationButton"
@@ -115,29 +129,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         >
+
         <Button
             android:id="@+id/goToLogin"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Уже есть аккаунт?"
-            android:textColor="#939292"
-            style="@style/Widget.AppCompat.Button.Borderless"
-
-            />
+            android:textColor="#939292" />
 
 
-    </TableRow>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/testView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Not saved data" />
     </TableRow>
 
 </TableLayout>
