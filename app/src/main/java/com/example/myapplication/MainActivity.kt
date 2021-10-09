@@ -38,13 +38,9 @@ class MainActivity : AppCompatActivity() {
         val savedEmail = sharedPreferences.getString("EMAIL_KEY", null)
         val savedPassword = sharedPreferences.getString("PASSWORD_KEY", null)
 
-        if(savedEmail?.isNotEmpty() == true && savedPassword?.isNotEmpty() == true ) {
+        if(savedEmail?.isNotEmpty() == true && savedPassword?.isNotEmpty() == true) {
             navController.navigate(R.id.action_loginFragment_to_enterFragment)
         }
-
-
-
-
     }
 
 
