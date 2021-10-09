@@ -41,7 +41,7 @@ class RegFragment : Fragment() {
 
         return view
     }
-
+    //Сохранение данных  внутри приложения
     private fun saveData(view: View?) {
         val userEmail = view?.addEmail?.text.toString()
         val userName = view?.addUsername?.text.toString()
