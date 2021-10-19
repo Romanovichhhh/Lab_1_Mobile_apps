@@ -46,8 +46,8 @@ class LoginFragment : Fragment() {
         val savedEmail = sharedPreferences.getString("EMAIL_KEY", null)
         val savedPassword = sharedPreferences.getString("PASSWORD_KEY", null)
 
-        val enteredEmail: String? = view?.enterEmail?.text.toString()
-        val enteredPassword: String? = view?.enterPassword?.text.toString()
+        val enteredEmail: String = view?.enterEmail?.text.toString()
+        val enteredPassword: String = view?.enterPassword?.text.toString()
 
         if (savedEmail == enteredEmail && savedPassword == enteredPassword) {
             checked = true
@@ -58,14 +58,15 @@ class LoginFragment : Fragment() {
         }
     }
 
+
     private fun dataIsValid(view: View?): Boolean {
         var checked: Boolean = false
 
-        val enteredEmail: String? = view?.enterEmail?.text.toString()
-        val enteredPassword: String? = view?.enterPassword?.text.toString()
+        val enteredEmail: String = view?.enterEmail?.text.toString()
+        val enteredPassword: String = view?.enterPassword?.text.toString()
 
         //Проверка на то, заполнены ли все поля
-        if (enteredEmail?.isNotEmpty() == true && enteredPassword?.isNotEmpty() == true) {
+        if (enteredEmail.isNotEmpty() && enteredPassword.isNotEmpty()) {
             //Проверка на правильно введённый пароль
             if (isValidEmail(enteredEmail)) {
                 //Проверка на нужное количество символов в пароле

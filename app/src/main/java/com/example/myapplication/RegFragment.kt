@@ -57,6 +57,7 @@ class RegFragment : Fragment() {
         Toast.makeText(requireActivity(), "Вы успешно зарегестрировались", Toast.LENGTH_SHORT).show()
     }
 
+        //Проверка на правильность ввода данных
       private fun dataIsValid (view: View?) : Boolean {
         var checked : Boolean = false
 
@@ -100,7 +101,7 @@ class RegFragment : Fragment() {
             return checked
         }
     }
-
+    // Встроеная функция проверки емейла
     private fun isValidEmail(target: CharSequence?): Boolean { //Функция проверяющая корректность введённого мыла
         return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches()
     }

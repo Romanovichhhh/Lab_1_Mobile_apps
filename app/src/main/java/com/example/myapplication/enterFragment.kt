@@ -45,6 +45,7 @@ class enterFragment : Fragment() {
 
 
 
+
     setHasOptionsMenu(true)
 
         val view = inflater.inflate(R.layout.fragment_enter, container, false)
