@@ -21,6 +21,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
         view.loginButton.setOnClickListener {
@@ -30,9 +31,11 @@ class LoginFragment : Fragment() {
             }
         }
 
+
         view.goToReg.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_regFragment)
         }
+
 
         return view
     }
@@ -40,8 +43,9 @@ class LoginFragment : Fragment() {
 
     private fun checkSharedData(view: View?): Boolean {
 
-        var checked: Boolean = false
 
+        var checked: Boolean = false
+        //Коннект к sharedPreferences
         val sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val savedEmail = sharedPreferences.getString("EMAIL_KEY", null)
         val savedPassword = sharedPreferences.getString("PASSWORD_KEY", null)
@@ -49,6 +53,7 @@ class LoginFragment : Fragment() {
         val enteredEmail: String = view?.enterEmail?.text.toString()
         val enteredPassword: String = view?.enterPassword?.text.toString()
 
+        //Валидация
         if (savedEmail == enteredEmail && savedPassword == enteredPassword) {
             checked = true
             return checked
@@ -58,12 +63,14 @@ class LoginFragment : Fragment() {
         }
     }
 
-
+    //Функция корректности ввода
     private fun dataIsValid(view: View?): Boolean {
+
         var checked: Boolean = false
 
         val enteredEmail: String = view?.enterEmail?.text.toString()
         val enteredPassword: String = view?.enterPassword?.text.toString()
+
 
         //Проверка на то, заполнены ли все поля
         if (enteredEmail.isNotEmpty() && enteredPassword.isNotEmpty()) {
@@ -75,6 +82,7 @@ class LoginFragment : Fragment() {
                     checked = true
                     return checked //Если все проверки пройдены возвращаем true
 
+
                     //Блок els'ов где выводятся соответствующие сообщения об ошибке
                 } else {
                     Toast.makeText(
@@ -83,20 +91,24 @@ class LoginFragment : Fragment() {
                         Toast.LENGTH_SHORT
                     ).show()
                     return checked
+
                 }
             } else {
                 Toast.makeText(requireActivity(), "Email введён некорректно", Toast.LENGTH_SHORT)
                     .show()
                 return checked
             }
+
         } else {
             Toast.makeText(requireActivity(), "Не все поля заполнены", Toast.LENGTH_SHORT)
                 .show()
             return checked
         }
+
     }
 
     private fun isValidEmail(target: CharSequence?): Boolean { //Функция проверяющая корректность введённого мыла
         return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches()
+
     }
 }

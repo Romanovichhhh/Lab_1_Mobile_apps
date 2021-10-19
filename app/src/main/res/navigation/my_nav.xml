@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
     app:startDestination="@id/loginFragment">
-
+    <!--some comment-->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.myapplication.LoginFragment"
@@ -17,6 +17,7 @@
             android:id="@+id/action_loginFragment_to_enterFragment"
             app:destination="@id/enterFragment" />
     </fragment>
+    <!--some comment-->
     <fragment
         android:id="@+id/regFragment"
         android:name="com.example.myapplication.RegFragment"
@@ -26,6 +27,7 @@
             android:id="@+id/action_regFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <!--some comment-->
     <fragment
         android:id="@+id/enterFragment"
         android:name="com.example.myapplication.enterFragment"
@@ -35,4 +37,5 @@
             android:id="@+id/action_enterFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <!--some comment-->
 </navigation>

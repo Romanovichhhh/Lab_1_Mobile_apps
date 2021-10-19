@@ -26,8 +26,7 @@ class RegFragment : Fragment() {
 
         val view =  inflater.inflate(R.layout.fragment_reg, container, false)
 
-
-
+        //Кнопка регистрации
         view.registrationButton.setOnClickListener {
             if (dataIsValid(view)) {
                 saveData(view)
@@ -35,18 +34,19 @@ class RegFragment : Fragment() {
             }
         }
 
+        //Кнопка возврата к авторизации
         view.goToLogin.setOnClickListener {
             findNavController().navigate(R.id.action_regFragment_to_loginFragment)
         }
 
         return view
     }
+
     //Сохранение данных  внутри приложения
     private fun saveData(view: View?) {
         val userEmail = view?.addEmail?.text.toString()
         val userName = view?.addUsername?.text.toString()
         val userPassword = view?.addPassword?.text.toString()
-
         val sharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply{

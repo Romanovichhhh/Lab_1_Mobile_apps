@@ -13,7 +13,7 @@
         android:layout_marginBottom="35dp"
         android:gravity="center">
 
-
+<!--some comment-->
 
         <TextView
             android:id="@+id/textView5"
@@ -25,6 +25,7 @@
             android:gravity="center_vertical"/>
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +43,7 @@
             tools:ignore="TouchTargetSizeCheck" />
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,6 +61,7 @@
             tools:ignore="TouchTargetSizeCheck" />
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,6 +80,7 @@
 
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,6 +95,7 @@
             android:textSize="12sp" />
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -108,6 +113,7 @@
             tools:ignore="TouchTargetSizeCheck" />
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -125,6 +131,7 @@
             android:text="Зарегестироваться" />
     </TableRow>
 
+    <!--some comment-->
     <TableRow
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -141,5 +148,5 @@
 
 
     </TableRow>
-
+    <!--some comment-->
 </TableLayout>
