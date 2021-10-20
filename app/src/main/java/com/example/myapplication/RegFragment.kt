@@ -26,8 +26,7 @@ class RegFragment : Fragment() {
 
         val view =  inflater.inflate(R.layout.fragment_reg, container, false)
 
-
-
+        //Кнопка регистрации
         view.registrationButton.setOnClickListener {
             if (dataIsValid(view)) {
                 saveData(view)
@@ -35,6 +34,7 @@ class RegFragment : Fragment() {
             }
         }
 
+        //Кнопка возврата к авторизации
         view.goToLogin.setOnClickListener {
             findNavController().navigate(R.id.action_regFragment_to_loginFragment)
         }
@@ -42,11 +42,11 @@ class RegFragment : Fragment() {
         return view
     }
 
+    //Сохранение данных  внутри приложения
     private fun saveData(view: View?) {
         val userEmail = view?.addEmail?.text.toString()
         val userName = view?.addUsername?.text.toString()
         val userPassword = view?.addPassword?.text.toString()
-
         val sharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.apply{
@@ -57,6 +57,7 @@ class RegFragment : Fragment() {
         Toast.makeText(requireActivity(), "Вы успешно зарегестрировались", Toast.LENGTH_SHORT).show()
     }
 
+        //Проверка на правильность ввода данных
       private fun dataIsValid (view: View?) : Boolean {
         var checked : Boolean = false
 
@@ -100,7 +101,7 @@ class RegFragment : Fragment() {
             return checked
         }
     }
-
+    // Встроеная функция проверки емейла
     private fun isValidEmail(target: CharSequence?): Boolean { //Функция проверяющая корректность введённого мыла
         return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches()
     }

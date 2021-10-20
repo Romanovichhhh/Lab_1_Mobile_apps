@@ -37,16 +37,21 @@ class enterFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
+    //I don't know
     @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
+
+
+
     setHasOptionsMenu(true)
 
         val view = inflater.inflate(R.layout.fragment_enter, container, false)
 
+        //Коннект к Shared Preferences
         val sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
         val savedUsername = sharedPreferences.getString("USERNAME_KEY", null)
         if (savedUsername?.isNotEmpty() == true) {
